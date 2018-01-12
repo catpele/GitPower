@@ -9,7 +9,7 @@
 	account or SAML/SSO infrastructure. I'd always recommend a dedicated SSO app (ADFS, etc) where possible.
 		
 	The user's GitHub username is stored in an Active Directory attribute (Default: 'info'). For the brave,
-	I'd	recommend creating a custom AD user attibute by editing the schema to make it obvious to future
+	I'd recommend creating a custom AD user attibute by editing the schema to make it obvious to future
 	administrators what the attribute is storing (ie. 'contoso-github-username').
 	
 	You'll need a GitHub API Token for most of the functions in this module to work. I'd highly recommend
