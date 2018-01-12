@@ -2,7 +2,7 @@
 	.SYNOPSIS PowerShell Module for Active Directory and GitHub API Automation
 	
 	.DESCRIPTION
-	This module provides a number of tools for helping to automate the provisioning, editing, removal
+	This module provides a number of tools for helping to automate the provisioning, editing and removal
 	of GitHub users from your GitHub Organisation, as well as some reporting functions.
 	
 	It's aimed at small businesses who want to manage and automate provisioning without a GitHub Enterprise
