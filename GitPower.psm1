@@ -9,7 +9,7 @@
 	account or SAML/SSO infrastructure. I'd always recommend a dedicated SSO app (ADFS, etc) where possible.
 		
 	The user's GitHub username is stored in an Active Directory attribute (Default: 'info'). For the brave,
-	I'd recommend creating a custom AD user attibute by editing the schema to make it obvious to future
+	I'd	recommend creating a custom AD user attibute by editing the schema to make it obvious to future
 	administrators what the attribute is storing (ie. 'contoso-github-username').
 	
 	You'll need a GitHub API Token for most of the functions in this module to work. I'd highly recommend
@@ -17,33 +17,32 @@
 	Secret so any scripts are not reliant on a named user.
 #>
 
-
-<#
-
-	.SYNOPSIS Invites GitHub users to your GitHub organisation.
-
-	.DESCRIPTION
-	Invite GitHub users to your GitHub organisation and store their login name in AD under the 'info' attribute.
-
-	.PARAMETER gitHubOrganisation
-	The name of the GitHub organisation that you want to invite new users to.
-	
-	.PARAMETER gitHubUsername
-	The GitHub username that you want to invite to your organisation.
-	
-	.PARAMETER gitHubAPIToken
-	Required to make changes to your organisation. You can obtain an API Token for your GitHub user account
-	via the following methods:
-	
-	.PARAMETER ADUsername
-	The username in Active Directory that you want to be associated with the GitHub username.
-	
-	.EXAMPLE
-	Add-GitHubUser -GitHubOrganisation 'Contoso' -GitHubUsername 'contoso-geoff' -ADUsername 'geoff' -GitHubAPIToken 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
-#>
-
 function Add-GitHubUser
 {
+	<#
+		.SYNOPSIS Invites GitHub users to your GitHub organisation.
+
+		.DESCRIPTION
+		Invite GitHub users to your GitHub organisation and store their login name in AD under
+		a user attribute.
+
+		.PARAMETER gitHubOrganisation
+		The name of the GitHub organisation that you want to invite new users to.
+		
+		.PARAMETER gitHubUsername
+		The GitHub username that you want to invite to your organisation.
+		
+		.PARAMETER gitHubAPIToken
+		Required to make changes to your organisation. You can obtain an API Token for your GitHub user
+		account	via the following methods:
+		
+		.PARAMETER ADUsername
+		The username in Active Directory that you want to be associated with the GitHub username.
+		
+		.EXAMPLE
+		Add-GitHubUser -GitHubOrganisation 'Contoso' -GitHubUsername 'contoso-geoff' -ADUsername 'geoff' -GitHubAPIToken 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
+	#>
+
 	param
 	(
 		[Parameter(Mandatory=$True)]
